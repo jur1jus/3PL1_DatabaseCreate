@@ -36,6 +36,7 @@ namespace _3PL1_DatabaseCreate
 			this.btnPridėti = new System.Windows.Forms.Button();
 			this.chxPirminisRaktas = new System.Windows.Forms.CheckBox();
 			this.txtLaukoIlgis = new System.Windows.Forms.TextBox();
+			this.btnGeneruoti = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// txtLaukoPavadinimas
@@ -64,7 +65,7 @@ namespace _3PL1_DatabaseCreate
 			// listBoxLaukai
 			// 
 			this.listBoxLaukai.FormattingEnabled = true;
-			this.listBoxLaukai.Location = new System.Drawing.Point(15, 148);
+			this.listBoxLaukai.Location = new System.Drawing.Point(15, 116);
 			this.listBoxLaukai.Name = "listBoxLaukai";
 			this.listBoxLaukai.Size = new System.Drawing.Size(260, 290);
 			this.listBoxLaukai.TabIndex = 2;
@@ -95,6 +96,7 @@ namespace _3PL1_DatabaseCreate
 			this.btnPridėti.TabIndex = 5;
 			this.btnPridėti.Text = "Pridėti";
 			this.btnPridėti.UseVisualStyleBackColor = true;
+			this.btnPridėti.Click += new System.EventHandler(this.btnPridėti_Click);
 			// 
 			// chxPirminisRaktas
 			// 
@@ -114,11 +116,22 @@ namespace _3PL1_DatabaseCreate
 			this.txtLaukoIlgis.TabIndex = 7;
 			this.txtLaukoIlgis.Visible = false;
 			// 
+			// btnGeneruoti
+			// 
+			this.btnGeneruoti.Location = new System.Drawing.Point(15, 413);
+			this.btnGeneruoti.Name = "btnGeneruoti";
+			this.btnGeneruoti.Size = new System.Drawing.Size(260, 23);
+			this.btnGeneruoti.TabIndex = 8;
+			this.btnGeneruoti.Text = "Generuoti";
+			this.btnGeneruoti.UseVisualStyleBackColor = true;
+			this.btnGeneruoti.Click += new System.EventHandler(this.btnGeneruoti_Click);
+			// 
 			// Lentelės
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(294, 447);
+			this.ClientSize = new System.Drawing.Size(294, 473);
+			this.Controls.Add(this.btnGeneruoti);
 			this.Controls.Add(this.txtLaukoIlgis);
 			this.Controls.Add(this.chxPirminisRaktas);
 			this.Controls.Add(this.btnPridėti);
@@ -144,5 +157,6 @@ namespace _3PL1_DatabaseCreate
 		private System.Windows.Forms.Button btnPridėti;
 		private System.Windows.Forms.CheckBox chxPirminisRaktas;
 		private System.Windows.Forms.TextBox txtLaukoIlgis;
+		private System.Windows.Forms.Button btnGeneruoti;
 	}
 }
