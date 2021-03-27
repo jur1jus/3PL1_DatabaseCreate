@@ -39,6 +39,7 @@ namespace _3PL1_DatabaseCreate
 			this.btnLenteliųKūrimas.TabIndex = 0;
 			this.btnLenteliųKūrimas.Text = "Lentelių kūrimas";
 			this.btnLenteliųKūrimas.UseVisualStyleBackColor = true;
+			this.btnLenteliųKūrimas.Click += new System.EventHandler(this.btnLenteliųKūrimas_Click);
 			// 
 			// Form1
 			// 

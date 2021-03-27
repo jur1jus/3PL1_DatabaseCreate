@@ -16,5 +16,11 @@ namespace _3PL1_DatabaseCreate
 		{
 			InitializeComponent();
 		}
+
+		private void btnLenteliųKūrimas_Click(object sender, EventArgs e)
+		{
+			Lentelės lentelės = new Lentelės();
+			lentelės.ShowDialog();
+		}
 	}
 }
