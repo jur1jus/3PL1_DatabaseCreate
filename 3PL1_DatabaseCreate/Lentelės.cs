@@ -49,6 +49,7 @@ namespace _3PL1_DatabaseCreate
 			var laukas = new Laukas(txtLaukoPavadinimas.Text, cmbxLaukoTipas.SelectedItem.ToString(), txtLaukoIlgis.Text, chxPirminisRaktas.Checked);
 			_laukai.Add(laukas);
 			listBoxLaukai.Items.Add(laukas);
+			NustatykDefaultReikšmes();
 		}
 
 		private void btnGeneruoti_Click(object sender, EventArgs e)
@@ -58,9 +59,14 @@ namespace _3PL1_DatabaseCreate
 				return;
 			}
 
+			if (string.IsNullOrEmpty(txtLentelėsPavadinimas.Text)) {
+				MessageBox.Show("Nurodykite lentelės pavadinimą.");
+				return;
+			}
+
 			Random random = new Random();
 			StringBuilder stringBuilder = new StringBuilder();
-			stringBuilder.AppendLine($"CREATE TABLE Test{random.Next(1, 100000)} (");
+			stringBuilder.AppendLine($"CREATE TABLE {txtLentelėsPavadinimas.Text} (");
 			//CREATE TABLE Test44545457 (
 
 			foreach (var laukas in _laukai) {
@@ -117,5 +123,31 @@ namespace _3PL1_DatabaseCreate
 			}
 		}
 
+		private void listBoxLaukai_KeyPress(object sender, KeyPressEventArgs e)
+		{
+			
+		}
+
+		private void listBoxLaukai_KeyUp(object sender, KeyEventArgs e)
+		{
+			var listbox = (ListBox)sender;
+			var itemIndex = listbox.SelectedIndex;
+			var item = listbox.SelectedItem;
+
+			if (e.KeyCode == Keys.Delete) {
+				listbox.Items.Remove(item);
+				_laukai.RemoveAt(itemIndex);
+				NustatykDefaultReikšmes();
+			}
+		}
+
+		private void NustatykDefaultReikšmes()
+		{
+			txtLaukoPavadinimas.Clear();
+			cmbxLaukoTipas.SelectedItem = "";
+			txtLaukoIlgis.Clear();
+			txtLaukoIlgis.Hide();
+			chxPirminisRaktas.Checked = false;
+		}
 	}
 }

@@ -10,6 +10,13 @@
 
 		public bool ArPirminisRaktas { get; set; }
 
+		public Laukas(string laukoPavadinimas, string duomenųTipas, bool arPirminisRaktas)
+		{
+			LaukoPavadinimas = laukoPavadinimas;
+			DuomenųTipas = duomenųTipas;
+			ArPirminisRaktas = arPirminisRaktas;
+		}
+
 		public Laukas(string laukoPavadinimas, string duomenųTipas, string ilgis, bool arPirminisRaktas)
 		{
 			LaukoPavadinimas = laukoPavadinimas;

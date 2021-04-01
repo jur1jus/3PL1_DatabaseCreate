@@ -37,11 +37,13 @@ namespace _3PL1_DatabaseCreate
 			this.chxPirminisRaktas = new System.Windows.Forms.CheckBox();
 			this.txtLaukoIlgis = new System.Windows.Forms.TextBox();
 			this.btnGeneruoti = new System.Windows.Forms.Button();
+			this.label3 = new System.Windows.Forms.Label();
+			this.txtLentelėsPavadinimas = new System.Windows.Forms.TextBox();
 			this.SuspendLayout();
 			// 
 			// txtLaukoPavadinimas
 			// 
-			this.txtLaukoPavadinimas.Location = new System.Drawing.Point(117, 12);
+			this.txtLaukoPavadinimas.Location = new System.Drawing.Point(124, 48);
 			this.txtLaukoPavadinimas.Name = "txtLaukoPavadinimas";
 			this.txtLaukoPavadinimas.Size = new System.Drawing.Size(121, 20);
 			this.txtLaukoPavadinimas.TabIndex = 0;
@@ -56,7 +58,7 @@ namespace _3PL1_DatabaseCreate
             "varchar",
             "bool",
             "datetime"});
-			this.cmbxLaukoTipas.Location = new System.Drawing.Point(117, 38);
+			this.cmbxLaukoTipas.Location = new System.Drawing.Point(124, 74);
 			this.cmbxLaukoTipas.Name = "cmbxLaukoTipas";
 			this.cmbxLaukoTipas.Size = new System.Drawing.Size(121, 21);
 			this.cmbxLaukoTipas.TabIndex = 1;
@@ -65,15 +67,17 @@ namespace _3PL1_DatabaseCreate
 			// listBoxLaukai
 			// 
 			this.listBoxLaukai.FormattingEnabled = true;
-			this.listBoxLaukai.Location = new System.Drawing.Point(15, 116);
+			this.listBoxLaukai.Location = new System.Drawing.Point(12, 152);
 			this.listBoxLaukai.Name = "listBoxLaukai";
-			this.listBoxLaukai.Size = new System.Drawing.Size(260, 290);
+			this.listBoxLaukai.Size = new System.Drawing.Size(275, 290);
 			this.listBoxLaukai.TabIndex = 2;
+			this.listBoxLaukai.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.listBoxLaukai_KeyPress);
+			this.listBoxLaukai.KeyUp += new System.Windows.Forms.KeyEventHandler(this.listBoxLaukai_KeyUp);
 			// 
 			// label1
 			// 
 			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(12, 15);
+			this.label1.Location = new System.Drawing.Point(9, 51);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(99, 13);
 			this.label1.TabIndex = 3;
@@ -82,7 +86,7 @@ namespace _3PL1_DatabaseCreate
 			// label2
 			// 
 			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(12, 41);
+			this.label2.Location = new System.Drawing.Point(9, 77);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(62, 13);
 			this.label2.TabIndex = 4;
@@ -90,7 +94,7 @@ namespace _3PL1_DatabaseCreate
 			// 
 			// btnPridėti
 			// 
-			this.btnPridėti.Location = new System.Drawing.Point(117, 87);
+			this.btnPridėti.Location = new System.Drawing.Point(124, 123);
 			this.btnPridėti.Name = "btnPridėti";
 			this.btnPridėti.Size = new System.Drawing.Size(75, 23);
 			this.btnPridėti.TabIndex = 5;
@@ -101,7 +105,7 @@ namespace _3PL1_DatabaseCreate
 			// chxPirminisRaktas
 			// 
 			this.chxPirminisRaktas.AutoSize = true;
-			this.chxPirminisRaktas.Location = new System.Drawing.Point(117, 65);
+			this.chxPirminisRaktas.Location = new System.Drawing.Point(124, 101);
 			this.chxPirminisRaktas.Name = "chxPirminisRaktas";
 			this.chxPirminisRaktas.Size = new System.Drawing.Size(105, 17);
 			this.chxPirminisRaktas.TabIndex = 6;
@@ -110,7 +114,7 @@ namespace _3PL1_DatabaseCreate
 			// 
 			// txtLaukoIlgis
 			// 
-			this.txtLaukoIlgis.Location = new System.Drawing.Point(244, 38);
+			this.txtLaukoIlgis.Location = new System.Drawing.Point(251, 74);
 			this.txtLaukoIlgis.Name = "txtLaukoIlgis";
 			this.txtLaukoIlgis.Size = new System.Drawing.Size(31, 20);
 			this.txtLaukoIlgis.TabIndex = 7;
@@ -118,19 +122,37 @@ namespace _3PL1_DatabaseCreate
 			// 
 			// btnGeneruoti
 			// 
-			this.btnGeneruoti.Location = new System.Drawing.Point(15, 413);
+			this.btnGeneruoti.Location = new System.Drawing.Point(12, 470);
 			this.btnGeneruoti.Name = "btnGeneruoti";
-			this.btnGeneruoti.Size = new System.Drawing.Size(260, 23);
+			this.btnGeneruoti.Size = new System.Drawing.Size(275, 23);
 			this.btnGeneruoti.TabIndex = 8;
 			this.btnGeneruoti.Text = "Generuoti";
 			this.btnGeneruoti.UseVisualStyleBackColor = true;
 			this.btnGeneruoti.Click += new System.EventHandler(this.btnGeneruoti_Click);
 			// 
+			// label3
+			// 
+			this.label3.AutoSize = true;
+			this.label3.Location = new System.Drawing.Point(9, 22);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(109, 13);
+			this.label3.TabIndex = 9;
+			this.label3.Text = "Lentelės pavadinimas";
+			// 
+			// txtLentelėsPavadinimas
+			// 
+			this.txtLentelėsPavadinimas.Location = new System.Drawing.Point(124, 19);
+			this.txtLentelėsPavadinimas.Name = "txtLentelėsPavadinimas";
+			this.txtLentelėsPavadinimas.Size = new System.Drawing.Size(121, 20);
+			this.txtLentelėsPavadinimas.TabIndex = 10;
+			// 
 			// Lentelės
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(294, 473);
+			this.ClientSize = new System.Drawing.Size(299, 550);
+			this.Controls.Add(this.txtLentelėsPavadinimas);
+			this.Controls.Add(this.label3);
 			this.Controls.Add(this.btnGeneruoti);
 			this.Controls.Add(this.txtLaukoIlgis);
 			this.Controls.Add(this.chxPirminisRaktas);
@@ -158,5 +180,7 @@ namespace _3PL1_DatabaseCreate
 		private System.Windows.Forms.CheckBox chxPirminisRaktas;
 		private System.Windows.Forms.TextBox txtLaukoIlgis;
 		private System.Windows.Forms.Button btnGeneruoti;
+		private System.Windows.Forms.Label label3;
+		private System.Windows.Forms.TextBox txtLentelėsPavadinimas;
 	}
 }

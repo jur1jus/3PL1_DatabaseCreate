@@ -22,5 +22,11 @@ namespace _3PL1_DatabaseCreate
 			Lentelės lentelės = new Lentelės();
 			lentelės.ShowDialog();
 		}
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+			IšorinisRaktas išorinisRaktas = new IšorinisRaktas();
+			išorinisRaktas.ShowDialog();
+		}
 	}
 }
